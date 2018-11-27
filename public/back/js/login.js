@@ -56,7 +56,7 @@ $(function(){
       $("#form").on("success.form.bv",function(e){
       // 阻止浏览器默认提交
         e.preventDefault();
-         console.log("阻止跳转") 
+        //  console.log("阻止跳转") 
          $.ajax({
            type:"post",
            url:"/employee/employeeLogin",
@@ -70,7 +70,7 @@ $(function(){
                return;
             }
             if(info.error===1001){
-              alert("密码错误")
+              // alert("密码错误")
               $("#form").data("bootstrapValidator").updateStatus("password","INVALID","callback")
               return;
             }
