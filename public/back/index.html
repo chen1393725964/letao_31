@@ -23,7 +23,7 @@
           <div class="nav">
               <ul>
                 <li><a class="active" href="#"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
-                <li><a href="javascript"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
+                <li><a href="javascript:;" class="category"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
                     <!-- 二级列表 -->
                   <div class="child">
                     <a href="first.html" >一级分类</a>
@@ -37,6 +37,8 @@
        <!-- 右侧主体部分 -->
         <div class="lt_main">
             <!-- 上面的 lt_topbar -->
+             <!-- 固定定位已经脱标 父盒子的padding 
+                  浏览窗口控制他和margin对他没用 他依据的的浏览器窗口 -->
             <div class="lt_topbar">
                 <a href="#" class="ico_left pull-left"><i class="glyphicon glyphicon-align-justify"></i></a>
                 <a href="#" class="ico_right pull-right"><i class="glyphicon glyphicon-log-out"></i></a>
@@ -45,15 +47,51 @@
             <div class="container-fluid">
               <ol class="breadcrumb mt_20">
                  <li><a href="#">管理系统</a></li>
-                 <li><a href="#">用户管理</a></li>                           
+                 <li><a href="#">用户管理</a></li>                       
               </ol>
+              <!-- css 方法了解 -->
+              <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#logoutModal">
+                我是按钮
+                  </button>    -->
             </div>
         </div>
+
+
+       
+          <!-- modal-lg  大
+            默认  中
+          modal-sm  小 -->
+        <!-- js 中的方法  show 显示  hide 隐藏  toggle 切换 -->
+            <!-- 给标签添加data-dismiss="modal" 模态框消失; -->
+                 <!-- dada-toggle="model" 切换模态框 -->
+                 <!-- data-target="#logoutModal"切换哪个模态框通过id 关联  -->
+             <!-- 外面是遮罩层 -->
+        <div class="modal fade" id="logoutModal" tabindex="-1" >
+           <!-- 模态框 -->
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                <p class="red"><i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-primary" id="logoutBtn">退出</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
 
     <script src="./lib/jquery/jquery.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/common.js"></script>
+    <script src="js/isLogin.js"></script>
 </body>
 </html>
