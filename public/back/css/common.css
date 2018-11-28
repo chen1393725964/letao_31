@@ -79,6 +79,9 @@ ul,li{
   color:#fff;
   padding-left: 40px;
 }
+.lt_aside .nav li .child{
+  display:none;
+}
 .lt_aside .nav li i{
   margin-right: 5px;
 }
@@ -103,6 +106,7 @@ ul,li{
   background-color: #3C8DBC;
   padding-left:180px ;
   transition: all 1s ;
+  z-index:998;
 }
 .lt_topbar.hidemenu{
   padding-left: 0;
@@ -120,11 +124,17 @@ ul,li{
 /* 首页右侧底部 */
 .lt_main{
   height: 2000px;
-  background-color: pink;
+  /* background-color: pink; */
   padding-left: 180px;
   padding-top: 50px;
   transition: all 1s;
 }
 .lt_main.hidemenu{
   padding-left: 0;
+}
+.echarts_left,
+.echarts_right{
+  width: 48%;
+  height: 400px;
+  background-color:skyblue;
 }
